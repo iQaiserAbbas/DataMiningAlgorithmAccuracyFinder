@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Result Page</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+
+            <div class="topbar-divider d-none d-sm-block">
+            </div>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <!-- Content Row -->
+          <div class="row">
+
+            <div class=" col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#c2" class="d-block card-header py-3 collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="c2">
+                  <h6 class="m-0 font-weight-bold text-primary"> Kmeans </h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse" id="c2">
+                  <div class="card-body">
+                  <div class="row">
+                      <div class=" col-lg-6">
+  
+                          <!-- Basic Card Example -->
+                          <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">Algorithm</h6>
+                            </div>
+                            <div class="card-body">
+                              <ul>
+                                  <li>
+                                    K-Means clustering is an unsupervised learning algorithm that, as the name hints, finds a fixed number (k) of clusters in a set of data. 
+                                  </li>
+                                  <li>
+                                    K-Means finds k number of centroids, and then assigns all data points to the closest cluster, with the aim of keeping the centroids small.
+                                  </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class=" col-lg-6">
+            
+                          <!-- Basic Card Example -->
+                          <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">Pros & Cons</h6>
+                            </div>
+                            <div class="card-body">
+                              <h3>Pros</h3>
+                              <ul>
+                                <li> Widely used method for cluster analysis </li>
+                                <li> Easy to understand </li>
+                                <li> Trains quickly </li>
+                              </ul>
+  
+                              <h3>Cons</h3>
+                              <ul>
+                                <li>
+                                  Euclidean distance is not ideal in many applications
+                                </li>
+                                <li>
+                                  Performance is (generally) not competitive with the best clustering methods
+                                </li>
+                                <li>
+                                  Small variations in the data can result in a completely different clusters (high variance)
+                                </li>
+                              </ul>
+  
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class=" col-lg-6">
+            
+                          <!-- Basic Card Example -->
+                          <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">Elbow Method</h6>
+                            </div>
+                            <div class="card-body">
+  
+                              <img src="{{ result.kmean }}" height="360px" width="480px" alt="Elbow Image">
+                              <input type="text" id="knum" value="4"/>
+                              <button id="kbutton"> Generate </button>
+  
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class=" col-lg-6">
+            
+                          <!-- Basic Card Example -->
+                          <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary">Clusters</h6>
+                            </div>
+                            <div class="card-body">
+  
+                              <img src="img/loading.gif" id="loading_k" height="250" width="250" alt="Loading...">
+                              <div id="kcluster">
+
+                              </div>
+
+
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of row -->
+            </div>
+          </div>
+
+
+          <div class=" col-lg-12">
+            <div class="card shadow mb-4">
+              <!-- Card Header - Accordion -->
+              <a href="#c3" class="d-block card-header py-3 collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="c3">
+                <h6 class="m-0 font-weight-bold text-primary"> Agglomerative Clustering </h6>
+              </a>
+              <!-- Card Content - Collapse -->
+              <div class="collapse" id="c3">
+                <div class="card-body">
+                <div class="row">
+                    <div class=" col-lg-6">
+
+                        <!-- Basic Card Example -->
+                        <div class="card shadow mb-4">
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Algorithm</h6>
+                          </div>
+                          <div class="card-body">
+                            <ul>
+                                <li>
+                                The agglomerative clustering is the most common type of hierarchical clustering used to group objects in clusters based on their similarity. It’s also known as AGNES (Agglomerative Nesting).
+                                </li>
+                                <li>
+                                 The algorithm starts by treating each object as a singleton cluster. Next, pairs of clusters are successively merged until all clusters have been merged into one big cluster containing all objects. The result is a tree-based representation of the objects, named dendrogram.
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class=" col-lg-6">
+          
+                        <!-- Basic Card Example -->
+                        <div class="card shadow mb-4">
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Pros & Cons</h6>
+                          </div>
+                          <div class="card-body">
+                            <h3>Pros</h3>
+                            <ul>
+                              <li> Single-link algorithms are best for capturing clusters of different sizes and shapes </li>
+                              <li> It's also sensitive to noise </li>
+                              <li> Complete link and group average are not affected by noise, but have a bias towards finding global patterns</li>
+                            </ul>
+
+                            <h3>Cons</h3>
+                            <ul>
+                              <li>
+                                Only Single-Link is computationally possible for large datasets, but it doesn't give good results because uses too little information
+                              </li>
+                            </ul>
+
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class=" col-lg-6">
+          
+                        <!-- Basic Card Example -->
+                        <div class="card shadow mb-4">
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Dendogram</h6>
+                          </div>
+                          <div class="card-body">
+
+                            <img src="{{ result.dendo }}" height="360px" width="480px" alt="Dendo Image">
+
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class=" col-lg-6">
+          
+                        <!-- Basic Card Example -->
+                        <div class="card shadow mb-4">
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Results </h6>
+                          </div>
+                          <div class="card-body">
+                            <span>
+
+                              <img src="{{ result.algo_3 }}" height="360px" width="480px" alt="Aglo 3 Image">
+
+                            </span>
+
+                            <span>
+
+                              <img src="{{ result.algo_4 }}" height="360px" width="480px" alt="Aglo 4 Image">
+
+                            </span>
+                            
+                          </div>
+                        </div>
+
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of row -->
+          </div>            
+
+        </div>
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; 2021 - DM Semester Project</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script>
+    $('#test').click( function () {
+      var data = $('form').serializeArray();
+
+      var loco = {}
+      for ( var d in data ){
+        loco[ data[d]['name'] ] = data[d]['value'] ;
+      }
+      console.log(loco);
+      $.post('/testresult',   // url
+       loco , // data to be submit
+       function(data, status, jqXHR) {// success callback
+                // $('p').append('status: ' + status + ', data: ' + data);
+                console.log(data + " is recieved");
+        })
+    });
+
+    $('#loading_k').hide();
+    $('#kbutton').click( function () {
+      $('#loading_k').fadeIn();
+      var num = $('#knum').val();
+      var url = "/kmeans/"+num;
+
+      $.get(url , function(data){
+        $('#loading_k').hide();
+        var text = ' <img src="' + data.figure + '" height="360px" width="480px" alt="Dendo Image"> '
+        $('#kcluster').html(text);
+      })
+    })
+  </script>
+</body>
+</html>
